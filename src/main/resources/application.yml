@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  context-path: /demo
+age: 8
+name: zhihua
+
+info: "年龄：${age}姓名：${name}"
+
+person:
+  name: zhihua
+  age: 18
+
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.30.93.84:32306/springboot
+    username: root
+    password: 123456
+
+  #spring-data-jpa的配置
+  jpa:
+    hibernate:
+      #设置自动创建数据库
+      #create：先删除，再创建表，以前表的数据清除
+      #update：不删除以前的数据
+      #create-drop：当应用停下来的时候删除
+      #none：默认什么也不做
+      #validate：先验证实体类和表结构是否一致，不一致就会报错
+      ddl-auto: update
+    #设置显示执行的sql语句
+    show-sql: true
+

@@ -1,0 +1,13 @@
+server:
+    port: 8080
+    context-path: /demo
+age: 8
+name: zhihua
+
+info: "年龄：${age}姓名：${name}"
+
+person:
+    name: zhihua
+    age: 18
+
+
